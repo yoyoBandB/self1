@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Twitch</title>
+    <link rel="stylesheet" href="./tw.css"/>
+</head>
+<body>
+    <div class="container" style="background:#555555">
+        <h1 class="title">Twitch API ─ Popular Game TV </h1>
+        <button class="lol">LOL Hito Live</button>
+        <button class="hs">Hearthstone Hito Live</button>
+        <div class="live">
+            <div class="game-tv">
+                
+                <a class="game-link" href="https://www.twitch.tv/gosu" target="_blank">
+                <div class="lang">Language：en</div>
+                <div class="tv-name">Topic:Gosu - SoloQ - Death Stranding in Q</div>
+                <div class="viewer">Viewer:4600</div>
+                <div class="pic">
+                    <img src="https://static-cdn.jtvnw.net/previews-ttv/live_user_gosu-320x180.jpg">
+                </div>
+                </a>
+            </div>
+        </div>
+        <div class="container">
+            <!-- Add a placeholder for the Twitch embed -->
+            <div id="twitch-embed"></div>
+
+            <!-- Load the Twitch embed script -->
+            <script src="https://embed.twitch.tv/embed/v1.js"></script>
+
+            <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
+            <script type="text/javascript">
+            function enter(name){
+                document.getElementById('twitch-embed').innerHTML = "";
+                console.log(name)
+                new Twitch.Embed("twitch-embed", {
+                width: 1000,
+                height: 1000,
+                muted: false,
+                channel: name,
+                // only needed if your site is also embedded on embed.example.com and othersite.example.com 
+                parent: ["embed.example.com", "othersite.example.com"]
+              });
+            }
+            </script>
+        </div>
+    </div>
+    
+    <script>
+        var name;
+        const request = new XMLHttpRequest(); //rq
+        const client = 'g7o1paeiwxkakqj4qs2zajdixk595n';
+        const game_num = 6;
+        let game_name = encodeURIComponent('League of Legends');
+        let base_url = `https://api.twitch.tv/kraken/streams/?game=${game_name}&limit=${game_num}`; 
+        console.log(base_url);
+        //https://api.twitch.tv/kraken/games/top
+        // 要拿到channel name https://twitch.tv/channel_name
+        // json.streams[i].channels 有資訊 url,game,broadcaster_language, status
+        // json.streams[i].viewers 有觀看人數
+        // json.streams[i].preview.medium 圖片
+        function put_live(json){
+            // 把抓好的json放到頁面上
+            const live_container = document.querySelector('.live'); 
+            live_container.innerHTML = ''; //清空
+            console.log(json.streams[0].channel.name)
+            for(let i=0; i<json.streams.length;i++){
+                const game_tv = document.createElement("div");  //創建物件
+                game_tv.classList.add('game-tv'); // 加入class
+                game_tv.innerHTML = `
+                <button onclick="enter(this.value)" value="${json.streams[i].channel.name}">${json.streams[i].channel.name}</button>
+                <a class="game-link" href="${json.streams[i].channel.url}" target="_blank">
+                <div class="lang">Language ： ${json.streams[i].channel.broadcaster_language}</div>
+                <div class="lang">name ： ${json.streams[i].channel.name}</div>
+                <div class="viewer">Viewer：${json.streams[i].viewers}</div>
+                <div class="pic">
+                    <img src="${json.streams[i].preview.medium}">
+                </div>
+                <div class="tv-name">Topic ： ${json.streams[i].channel.status}</div>
+                </a>
+                `; // 把資訊引入
+                live_container.appendChild(game_tv);
+
+            }
+
+        }
+        function download_twitch(){
+            request.onload = function(){
+                if (request.status>=200 && request.status<400){
+                    const response = request.responseText;
+                    const json = JSON.parse(response);
+                    console.log(json.streams);
+                    put_live(json);
+                }else{
+                    console.log('error');
+                }
+            }
+            request.open("GET",base_url,true); //非同步
+            request.setRequestHeader('Accept', 'application/vnd.twitchtv.v5+json');
+            request.setRequestHeader('Client-ID',client);
+            request.send();
+        }
+
+        document.querySelector(".container").addEventListener("click", 
+            function(e){
+                if (e.target.classList.value === 'lol'){
+                    game_name = encodeURIComponent('League of Legends');
+                    base_url = `https://api.twitch.tv/kraken/streams/?game=${game_name}&limit=6&language=zh`;
+                    console.log(base_url);
+                    download_twitch();
+                }else if (e.target.classList.value === 'hs'){
+                    game_name = encodeURIComponent('Hearthstone');
+                    base_url = `https://api.twitch.tv/kraken/streams/?game=${game_name}&limit=${game_num}`;
+                    download_twitch();
+                }
+            }
+        )
+    </script>
+</body>
+</html>
