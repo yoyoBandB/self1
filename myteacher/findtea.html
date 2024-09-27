@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="fontawesome-free-5.15.2-web/css/all.css">
+</head>
+<body>
+	<div class="container-fluid" style="height:400px;background: url(pic/my/myteator網頁-43.png);background-size: 100% 100%;">
+		<div class="container">
+			<nav class="navbar navbar-expand-lg navbar-light">
+			  <div class="container-fluid">
+			  	<div class="col d-flex justify-content-start">
+			  		<img src="pic/my/myteator網頁-16.png" alt="">
+			  	</div>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+				    <div class="navbar-nav ">
+					    <a class="nav-link active text-warning font-weight-bold" aria-current="page" href="home.html">最新消息</a>
+						<a class="nav-link active text-white font-weight-bold" aria-current="page" href="#">關於我們</a>
+						<a class="nav-link active text-white font-weight-bold" aria-current="page" href="findtea.html">找師資</a>
+						<a class="nav-link active text-white font-weight-bold" aria-current="page" href="findjob.html">找工作</a>
+						<a class="nav-link active text-white font-weight-bold" aria-current="page" href="blog.html">部落格</a>
+					</div>
+				</div>
+			</nav>
+		</div>
+		<div class="row" style="position: absolute;right:50px;top:20%;height:190px;width:65px;border-radius:30px;background: #1F4D7E;box-shadow:10px 10px 20px 2px rgba(0,0,0,0.7);">
+			<div class="col" style="height:10px;"></div>
+			<div class="col bg- d-flex justify-content-center" >
+				<div>
+					<a href=""><img src="pic/my/myteator網頁-21.png"  alt=""></a>
+					<span class="d-flex justify-content-center text-white">購物車</span>
+				</div>	
+			</div>
+			<div class="col" style="transform: translateY(-5px);">
+				<hr size="4" style="opacity: 1;color:white;">
+			</div>
+			<form action="p01.php" method="post" accept-charset="utf-8"style="transform: translateY(-10px);">
+				<div class="col d-flex justify-content-center">
+					<div class="col-8"><a style="text-decoration: none;" class="text-warning fw-bold" href="signinout.html">登入</a></div>
+					<div class="col-5" ><a href="signinout.html" style="text-decoration:none;" class="text-warning fw-bold">註冊</a></div>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<div class="container-fluid" style="background: url(pic/my/myteator網頁-28.png);background-size: 100% 100%;">
+		<div class="row pt-2 pb-2">
+			<div class="col-3 d-flex justify-content-center text-white fw-bold" style="">
+				Course materials
+			</div>
+			<div class="col d-flex justify-content-end" >
+				<form method="get" style="width: 300px;" class="d-flex justify-content-center justify-content-md-start">
+					<style>
+						#se::placeholder{
+							color:white;
+						}
+					</style>
+					<input id="se" type="text" placeholder="搜尋" style="background:transparent;border-top: 0px; border-left: 0;border-right: 0;border-bottom:2px solid white;">
+					<button style="border:0px;"><img src="pic/my/myteator網頁-14.png" alt=""></button>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-1"></div>
+			<div class="col">
+				首頁>找老師
+			</div>
+		</div>
+		<div class="row" style="position: relative;">
+			<div class="row d-lg-none">
+				<div class="col">
+					<input type="submit" onclick="open1()" style="background: url(pic/my/myteator網頁-17.png);background-size: 100% 100%;border:0;transform: scaleX(-1);" value="">
+				</div>
+			</div>
+			<div class="col-3 d-lg-none" id="left" hidden="false" style="position: absolute;background: #394B6D;top:30px;">
+				<div class="row justify-content-end">
+					<h3 class="fw-bold d-flex justify-content-end">服務分類</h3>	
+				</div>
+				<div class="row ">
+					<div class="col d-flex justify-content-end">
+						<ul>
+							<li><input type="radio">伴讀/保姆</li>
+							<li><input type="radio">學科</li>
+							<li><input type="radio">語文</li>
+							<li><input type="radio">音學</li>
+							<li><input type="radio">休閒才藝</li>
+							<li><input type="radio">術科/職場技能</li>
+							<li><input type="radio">體育/舞蹈</li>
+						</ul>
+					</div>
+				</div>
+				<div class="row justify-content-end">
+					<div class="col-md-5 col-lg-7"></div>
+					<div class="col">
+						<div class="col">進階篩選</div>
+						<div class="col">服務金額</div>
+						<div class="col d-flex">
+							<div class="col-5"><input type="text" class="w-100"></div>
+							<div class="col-1">~</div>
+							<div class="col-6"><input type="text" name="" id="" class="w-100"></div>
+						</div>
+						<div class="col">服務經驗</div>
+						<div class="col">
+							<select class="w-100">
+								<option>不限</option>
+							</select>
+						</div>
+						<div class="col">服務地區</div>
+						<div class="col">
+							<select class="w-100">
+								<option>請選擇地區</option>
+							</select>
+						</div>
+						<div class="col">服務方式</div>
+						<div class="col">
+							<select class="w-100">
+								<option>不限</option>
+							</select>
+						</div>
+						<div class="col">服務對象</div>
+						<div class="col">
+							<select class="w-100">
+								<option>不限</option>
+							</select>
+						</div>
+						<div class="col">服務時段</div>
+					</div>
+				</div>
+				<div class="row" style="padding:20px;">
+					<div class="col d-flex justify-content-end">
+						<ul>
+							<li><input type="radio">平日全時段</li>
+							<li><input type="radio">平日上午</li>
+							<li><input type="radio">平日下午</li>
+							<li><input type="radio">平日晚上</li>
+							<li><input type="radio">假日全時段</li>
+							<li><input type="radio">假日上午</li>
+							<li><input type="radio">假日下午</li>
+							<li><input type="radio">假日晚上</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<script type="text/javascript">
+				var a=0;
+				function open1() {
+					if(a%2==0)
+					{
+						document.getElementById("left").hidden=false;
+					}
+					else
+					{
+						document.getElementById("left").hidden=true;
+					}
+					a++;
+				}
+			</script>
+			<div class="col-3 d-none d-lg-block">
+				<div class="row">
+					<div class="col"></div>
+					<div class="col">
+						<div class="col"><h3 class="fw-bold">服務分類</h3></div>
+						<div class="col">
+							<li class="fas fa-caret-right d-block p-2"><input type="radio" style="margin-right:10px;margin-left: 10px;">伴讀/保姆</li>
+							<li class="fas fa-caret-right d-block p-2"><input type="radio" style="margin-right:10px;margin-left: 10px;">學科</li>
+							<li class="fas fa-caret-right d-block p-2"><input type="radio" style="margin-right:10px;margin-left: 10px;">語文</li>
+							<li class="fas fa-caret-right d-block p-2"><input type="radio" style="margin-right:10px;margin-left: 10px;">音學</li>
+							<li class="fas fa-caret-right d-block p-2"><input type="radio" style="margin-right:10px;margin-left: 10px;">休閒才藝</li>
+							<li class="fas fa-caret-right d-block p-2"><input type="radio" style="margin-right:10px;margin-left: 10px;">術科/職場技能</li>
+							<li class="fas fa-caret-right d-block p-2"><input type="radio" style="margin-right:10px;margin-left: 10px;">體育/舞蹈</li>
+						</div>
+						<div class="col-md-5 col-lg-7"></div>
+						<div class="col">
+							<div class="col" style="font-size: 24px;border-bottom: 1px solid black;">
+								<div class="col d-flex justify-content-between">進階篩選<img src="pic/my/myteator網頁-20.png" alt=""></div>
+							</div>
+							<div class="col pt-1">服務金額</div>
+							<div class="col d-flex">
+								<div class="col-5"><input type="text" class="w-100" style="background: #D1D3D4;border:0px;" placeholder="$"></div>
+								<div class="col-1">~</div>
+								<div class="col-6"><input type="text" name="" id="" class="w-100" style="background: #D1D3D4;border:0px;" placeholder="$"></div>
+							</div>
+							<div class="col">服務經驗</div>
+							<div class="col">
+								<select style="background: #D1D3D4;border:0px;" class="w-100">
+									<option>不限</option>
+								</select>
+							</div>
+							<div class="col">服務地區</div>
+							<div class="col">
+								<select style="background: #D1D3D4;border:0px;" class="w-100">
+									<option>請選擇地區</option>
+								</select>
+							</div>
+							<div class="col">服務方式</div>
+							<div class="col">
+								<select style="background: #D1D3D4;border:0px;" class="w-100">
+									<option>不限</option>
+								</select>
+							</div>
+							<div class="col">服務對象</div>
+							<div class="col">
+								<select style="background: #D1D3D4;border:0px;" class="w-100">
+									<option>不限</option>
+								</select>
+							</div>
+							<div class="col">服務時段</div>
+						</div>
+						<div class="col"><input type="radio"><span>&nbsp平日全時段</span></div>
+						<div class="col"><input type="radio"><span>&nbsp平日上午</span></div>
+						<div class="col"><input type="radio"><span>&nbsp平日下午</span></div>
+						<div class="col"><input type="radio"><span>&nbsp平日晚上</span></div>
+						<div class="col"><input type="radio"><span>&nbsp假日全時段</span></div>
+						<div class="col"><input type="radio"><span>&nbsp假日上午</span></div>
+						<div class="col"><input type="radio"><span>&nbsp假日下午</span></div>
+						<div class="col"><input type="radio"><span>&nbsp假日晚上</span></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row d-lg-none d-flex justify-content-center">
+				<div class="col-3 d-flex justify-content-center">
+					<img src="pic/my/myteator網頁-08_new.png" alt="" class="w-100">
+				</div>
+				<div class="col-6">
+					<div class="col" style="color: #394B6D;font-weight: bold;">
+						ANGEL娜娜兒少|成人美語&nbsp英聽口說文法難不倒!
+					</div>
+					<div class="col" style="color: #808080;">
+						10年教學經驗多重認證
+					</div>
+					<div class="col" style="color: #808080;">
+						<img src="pic/my/myteator網頁-13.png">
+						5.1個評論
+					</div>
+					<div class="col" style="color: #394B6D;font-weight: bold;">
+						一個月課程招生中正式課程新詩優惠7折限前10名幫助你解決英文
+						學習的疑難雜症國北課程碩士生|商學院英語專業 專長為發印入門
+						、生活英文，文法扎根、自主閱讀!世界運動賽事英文即時口譯員ES
+						L全英語教學讓娜娜成為你的最好
+					</div>
+					<div class="col">
+						<div class="row">
+							<div class="col d-flex justify-content-end">
+								<button style="width: 120px;background: #3889C9;color: white;">預約體驗</button>
+								<button style="margin-left: 10px;width: 120px;">聯絡老師</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row d-lg-none d-flex">
+				<div class="col-5 d-flex justify-content-center" style="color: #394B6D;font-size: 26px;">
+					<div>
+						<div class="col">
+							<div class="col">NT$154</div>
+							<div class="col" style="font-size: 10px;">25分鐘</div>
+						</div>
+						<div class="col">
+							<div class="col">NT$735</div>
+							<div class="col" style="font-size: 10px;">50分鐘</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-5">
+					<img src="pic/my/myteator網頁-09_new.png" class="w-100" alt="">
+				</div>
+			</div>
+			<div class="row d-lg-none d-flex justify-content-center">
+				<div class="col-3 d-flex justify-content-center">
+					<img src="pic/my/myteator網頁-08_new.png" alt="" class="w-100">
+				</div>
+				<div class="col-6">
+					<div class="col" style="color: #394B6D;font-weight: bold;">
+						ANGEL娜娜兒少|成人美語&nbsp英聽口說文法難不倒!
+					</div>
+					<div class="col" style="color: #808080;">
+						10年教學經驗多重認證
+					</div>
+					<div class="col" style="color: #808080;">
+						<img src="pic/my/myteator網頁-13.png">
+						5.1個評論
+					</div>
+					<div class="col" style="color: #394B6D;font-weight: bold;">
+						一個月課程招生中正式課程新詩優惠7折限前10名幫助你解決英文
+						學習的疑難雜症國北課程碩士生|商學院英語專業 專長為發印入門
+						、生活英文，文法扎根、自主閱讀!世界運動賽事英文即時口譯員ES
+						L全英語教學讓娜娜成為你的最好
+					</div>
+					<div class="col">
+						<div class="row">
+							<div class="col d-flex justify-content-end">
+								<button style="width: 120px;background: #3889C9;color: white;">預約體驗</button>
+								<button style="margin-left: 10px;width: 120px;">聯絡老師</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row d-lg-none d-flex">
+				<div class="col-5 d-flex justify-content-center" style="color: #394B6D;font-size: 26px;">
+					<div>
+						<div class="col">
+							<div class="col">NT$154</div>
+							<div class="col" style="font-size: 10px;">25分鐘</div>
+						</div>
+						<div class="col">
+							<div class="col">NT$735</div>
+							<div class="col" style="font-size: 10px;">50分鐘</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-5">
+					<img src="pic/my/myteator網頁-09_new.png" class="w-100" alt="">
+				</div>
+			</div>
+			<div class="row d-lg-none d-flex justify-content-center">
+				<div class="col-3 d-flex justify-content-center">
+					<img src="pic/my/myteator網頁-08_new.png" alt="" class="w-100">
+				</div>
+				<div class="col-6">
+					<div class="col" style="color: #394B6D;font-weight: bold;">
+						ANGEL娜娜兒少|成人美語&nbsp英聽口說文法難不倒!
+					</div>
+					<div class="col" style="color: #808080;">
+						10年教學經驗多重認證
+					</div>
+					<div class="col" style="color: #808080;">
+						<img src="pic/my/myteator網頁-13.png">
+						5.1個評論
+					</div>
+					<div class="col" style="color: #394B6D;font-weight: bold;">
+						一個月課程招生中正式課程新詩優惠7折限前10名幫助你解決英文
+						學習的疑難雜症國北課程碩士生|商學院英語專業 專長為發印入門
+						、生活英文，文法扎根、自主閱讀!世界運動賽事英文即時口譯員ES
+						L全英語教學讓娜娜成為你的最好
+					</div>
+					<div class="col">
+						<div class="row">
+							<div class="col d-flex justify-content-end">
+								<button style="width: 120px;background: #3889C9;color: white;">預約體驗</button>
+								<button style="margin-left: 10px;width: 120px;">聯絡老師</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row d-lg-none d-flex">
+				<div class="col-5 d-flex justify-content-center" style="color: #394B6D;font-size: 26px;">
+					<div>
+						<div class="col">
+							<div class="col">NT$154</div>
+							<div class="col" style="font-size: 10px;">25分鐘</div>
+						</div>
+						<div class="col">
+							<div class="col">NT$735</div>
+							<div class="col" style="font-size: 10px;">50分鐘</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-5">
+					<img src="pic/my/myteator網頁-09_new.png" class="w-100" alt="">
+				</div>
+			</div>
+
+			<div class="col-9 d-none d-lg-block">
+				<div class="row">
+					<div class="col-1 d-flex align-items-center">
+						<img src="pic/my/myteator網頁-08_new.png" alt="" class="w-100">
+					</div>
+					<div class="col-5">
+						<div class="col" style="color: #394B6D;font-weight: bold;">
+							ANGEL娜娜兒少|成人美語&nbsp英聽口說文法難不倒!
+						</div>
+						<div class="col" style="color: #808080;">
+							10年教學經驗多重認證
+						</div>
+						<div class="col" style="color: #808080;">
+							<img src="pic/my/myteator網頁-13.png">
+							5.1個評論
+						</div>
+						<div class="col" style="color: #394B6D;font-weight: bold;">
+							一個月課程招生中正式課程新詩優惠7折限前10名幫助你解決英文
+							學習的疑難雜症國北課程碩士生|商學院英語專業 專長為發印入門
+							、生活英文，文法扎根、自主閱讀!世界運動賽事英文即時口譯員ES
+							L全英語教學讓娜娜成為你的最好
+						</div>
+						<div class="col">
+							<div class="row">
+								<div class="col d-flex justify-content-end">
+									<button style="width: 120px;background: #3889C9;color: white;">預約體驗</button>
+									<button style="margin-left: 10px;width: 120px;">聯絡老師</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-3">
+						<div class="row pb-4" style="color: #394B6D;font-weight: bold;">
+							<div class="col-6">
+								<div class="col">NT$154</div>
+								<div class="col" style="font-size: 10px;">25分鐘</div>
+							</div>
+							<div class="col-6">
+								<div class="col">NT$735</div>
+								<div class="col" style="font-size: 10px;">50分鐘</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-12">
+								<img class="w-100" src="pic/my/myteator網頁-09_new.png">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row pt-5">
+					<div class="col-1 d-flex align-items-center">
+						<img src="pic/my/myteator網頁-08_new.png" alt="" class="w-100">
+					</div>
+					<div class="col-5">
+						<div class="col" style="color: #394B6D;font-weight: bold;">
+							ANGEL娜娜兒少|成人美語&nbsp英聽口說文法難不倒!
+						</div>
+						<div class="col" style="color: #808080;">
+							10年教學經驗多重認證
+						</div>
+						<div class="col" style="color: #808080;">
+							<img src="pic/my/myteator網頁-13.png">
+							5.1個評論
+						</div>
+						<div class="col" style="color: #394B6D;font-weight: bold;">
+							一個月課程招生中正式課程新詩優惠7折限前10名幫助你解決英文
+							學習的疑難雜症國北課程碩士生|商學院英語專業 專長為發印入門
+							、生活英文，文法扎根、自主閱讀!世界運動賽事英文即時口譯員ES
+							L全英語教學讓娜娜成為你的最好
+						</div>
+						<div class="col">
+							<div class="row">
+								<div class="col d-flex justify-content-end">
+									<button style="width: 120px;background: #3889C9;color: white;">預約體驗</button>
+									<button style="margin-left: 10px;width: 120px;">聯絡老師</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-3">
+						<div class="row pb-4" style="color: #394B6D;font-weight: bold;">
+							<div class="col-6">
+								<div class="col">NT$154</div>
+								<div class="col" style="font-size: 10px;">25分鐘</div>
+							</div>
+							<div class="col-6">
+								<div class="col">NT$735</div>
+								<div class="col" style="font-size: 10px;">50分鐘</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-12">
+								<img class="w-100" src="pic/my/myteator網頁-09_new.png">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row pt-5">
+					<div class="col-1 d-flex align-items-center">
+						<img src="pic/my/myteator網頁-08_new.png" alt="" class="w-100">
+					</div>
+					<div class="col-5">
+						<div class="col" style="color: #394B6D;font-weight: bold;">
+							ANGEL娜娜兒少|成人美語&nbsp英聽口說文法難不倒!
+						</div>
+						<div class="col" style="color: #808080;">
+							10年教學經驗多重認證
+						</div>
+						<div class="col" style="color: #808080;">
+							<img src="pic/my/myteator網頁-13.png">
+							5.1個評論
+						</div>
+						<div class="col" style="color: #394B6D;font-weight: bold;">
+							一個月課程招生中正式課程新詩優惠7折限前10名幫助你解決英文
+							學習的疑難雜症國北課程碩士生|商學院英語專業 專長為發印入門
+							、生活英文，文法扎根、自主閱讀!世界運動賽事英文即時口譯員ES
+							L全英語教學讓娜娜成為你的最好
+						</div>
+						<div class="col">
+							<div class="row">
+								<div class="col d-flex justify-content-end">
+									<button style="width: 120px;background: #3889C9;color: white;">預約體驗</button>
+									<button style="margin-left: 10px;width: 120px;">聯絡老師</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-3">
+						<div class="row pb-4" style="color: #394B6D;font-weight: bold;">
+							<div class="col-6">
+								<div class="col">NT$154</div>
+								<div class="col" style="font-size: 10px;">25分鐘</div>
+							</div>
+							<div class="col-6">
+								<div class="col">NT$735</div>
+								<div class="col" style="font-size: 10px;">50分鐘</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-12">
+								<img class="w-100" src="pic/my/myteator網頁-09_new.png">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row pt-5">
+					<div class="col-1 d-flex align-items-center">
+						<img src="pic/my/myteator網頁-08_new.png" alt="" class="w-100">
+					</div>
+					<div class="col-5">
+						<div class="col" style="color: #394B6D;font-weight: bold;">
+							ANGEL娜娜兒少|成人美語&nbsp英聽口說文法難不倒!
+						</div>
+						<div class="col" style="color: #808080;">
+							10年教學經驗多重認證
+						</div>
+						<div class="col" style="color: #808080;">
+							<img src="pic/my/myteator網頁-13.png">
+							5.1個評論
+						</div>
+						<div class="col" style="color: #394B6D;font-weight: bold;">
+							一個月課程招生中正式課程新詩優惠7折限前10名幫助你解決英文
+							學習的疑難雜症國北課程碩士生|商學院英語專業 專長為發印入門
+							、生活英文，文法扎根、自主閱讀!世界運動賽事英文即時口譯員ES
+							L全英語教學讓娜娜成為你的最好
+						</div>
+						<div class="col">
+							<div class="row">
+								<div class="col d-flex justify-content-end">
+									<button style="width: 120px;background: #3889C9;color: white;">預約體驗</button>
+									<button style="margin-left: 10px;width: 120px;">聯絡老師</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-3">
+						<div class="row pb-4" style="color: #394B6D;font-weight: bold;">
+							<div class="col-6">
+								<div class="col">NT$154</div>
+								<div class="col" style="font-size: 10px;">25分鐘</div>
+							</div>
+							<div class="col-6">
+								<div class="col">NT$735</div>
+								<div class="col" style="font-size: 10px;">50分鐘</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-12">
+								<img class="w-100" src="pic/my/myteator網頁-09_new.png">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row pt-5">
+					<div class="col-1 d-flex align-items-center">
+						<img src="pic/my/myteator網頁-08_new.png" alt="" class="w-100">
+					</div>
+					<div class="col-5">
+						<div class="col" style="color: #394B6D;font-weight: bold;">
+							ANGEL娜娜兒少|成人美語&nbsp英聽口說文法難不倒!
+						</div>
+						<div class="col" style="color: #808080;">
+							10年教學經驗多重認證
+						</div>
+						<div class="col" style="color: #808080;">
+							<img src="pic/my/myteator網頁-13.png">
+							5.1個評論
+						</div>
+						<div class="col" style="color: #394B6D;font-weight: bold;">
+							一個月課程招生中正式課程新詩優惠7折限前10名幫助你解決英文
+							學習的疑難雜症國北課程碩士生|商學院英語專業 專長為發印入門
+							、生活英文，文法扎根、自主閱讀!世界運動賽事英文即時口譯員ES
+							L全英語教學讓娜娜成為你的最好
+						</div>
+						<div class="col">
+							<div class="row">
+								<div class="col d-flex justify-content-end">
+									<button style="width: 120px;background: #3889C9;color: white;">預約體驗</button>
+									<button style="margin-left: 10px;width: 120px;">聯絡老師</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-3">
+						<div class="row pb-4" style="color: #394B6D;font-weight: bold;">
+							<div class="col-6">
+								<div class="col">NT$154</div>
+								<div class="col" style="font-size: 10px;">25分鐘</div>
+							</div>
+							<div class="col-6">
+								<div class="col">NT$735</div>
+								<div class="col" style="font-size: 10px;">50分鐘</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-12">
+								<img class="w-100" src="pic/my/myteator網頁-09_new.png">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row pt-5">
+					<div class="col-1 d-flex align-items-center">
+						<img src="pic/my/myteator網頁-08_new.png" alt="" class="w-100">
+					</div>
+					<div class="col-5">
+						<div class="col" style="color: #394B6D;font-weight: bold;">
+							ANGEL娜娜兒少|成人美語&nbsp英聽口說文法難不倒!
+						</div>
+						<div class="col" style="color: #808080;">
+							10年教學經驗多重認證
+						</div>
+						<div class="col" style="color: #808080;">
+							<img src="pic/my/myteator網頁-13.png">
+							5.1個評論
+						</div>
+						<div class="col" style="color: #394B6D;font-weight: bold;">
+							一個月課程招生中正式課程新詩優惠7折限前10名幫助你解決英文
+							學習的疑難雜症國北課程碩士生|商學院英語專業 專長為發印入門
+							、生活英文，文法扎根、自主閱讀!世界運動賽事英文即時口譯員ES
+							L全英語教學讓娜娜成為你的最好
+						</div>
+						<div class="col">
+							<div class="row">
+								<div class="col d-flex justify-content-end">
+									<button style="width: 120px;background: #3889C9;color: white;">預約體驗</button>
+									<button style="margin-left: 10px;width: 120px;">聯絡老師</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-3">
+						<div class="row pb-4" style="color: #394B6D;font-weight: bold;">
+							<div class="col-6">
+								<div class="col">NT$154</div>
+								<div class="col" style="font-size: 10px;">25分鐘</div>
+							</div>
+							<div class="col-6">
+								<div class="col">NT$735</div>
+								<div class="col" style="font-size: 10px;">50分鐘</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-12">
+								<img class="w-100" src="pic/my/myteator網頁-09_new.png">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row pt-5">
+					<div class="col-1 d-flex align-items-center">
+						<img src="pic/my/myteator網頁-08_new.png" alt="" class="w-100">
+					</div>
+					<div class="col-5">
+						<div class="col" style="color: #394B6D;font-weight: bold;">
+							ANGEL娜娜兒少|成人美語&nbsp英聽口說文法難不倒!
+						</div>
+						<div class="col" style="color: #808080;">
+							10年教學經驗多重認證
+						</div>
+						<div class="col" style="color: #808080;">
+							<img src="pic/my/myteator網頁-13.png">
+							5.1個評論
+						</div>
+						<div class="col" style="color: #394B6D;font-weight: bold;">
+							一個月課程招生中正式課程新詩優惠7折限前10名幫助你解決英文
+							學習的疑難雜症國北課程碩士生|商學院英語專業 專長為發印入門
+							、生活英文，文法扎根、自主閱讀!世界運動賽事英文即時口譯員ES
+							L全英語教學讓娜娜成為你的最好
+						</div>
+						<div class="col">
+							<div class="row">
+								<div class="col d-flex justify-content-end">
+									<button style="width: 120px;background: #3889C9;color: white;">預約體驗</button>
+									<button style="margin-left: 10px;width: 120px;">聯絡老師</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-3">
+						<div class="row pb-4" style="color: #394B6D;font-weight: bold;">
+							<div class="col-6">
+								<div class="col">NT$154</div>
+								<div class="col" style="font-size: 10px;">25分鐘</div>
+							</div>
+							<div class="col-6">
+								<div class="col">NT$735</div>
+								<div class="col" style="font-size: 10px;">50分鐘</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-12">
+								<img class="w-100" src="pic/my/myteator網頁-09_new.png">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<style type="text/css">
+		ul.pagination {
+		    display: inline-block;
+		    padding: 0;
+		    margin: 0;
+		}
+
+		ul.pagination li {display: inline;}
+
+		ul.pagination li a {
+		    color: black;
+		    float: left;
+		    padding: 8px 16px;
+		    text-decoration: none;
+		}
+	</style>
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col d-flex justify-content-center">
+				<ul class="pagination">
+					<li><a href="#">«</a></li>
+					<li><a href="#">1</a></li>
+					<li><a class="active" href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">»</a></li>
+				</ul>
+			</div>	
+		</div>
+	</div>
+	
+	<div class="container-fluid footer text-white" style="background: #394B6D;line-height: 3;font-weight: bold;">
+		<div class="row justify-content-center">
+			<div class="col-12 col-lg-4 d-flex justify-content-center">&copyMTeacher,Inc.</div>
+			<div class="col-12 col-lg-4 d-flex justify-content-center">FAQ聯絡我們付費方案</div>
+			<div class="col-12 col-lg-4 d-flex justify-content-center">網站地圖、服務條款隱私聲明</div>
+		</div>
+	</div>
+</body>
+</html>
