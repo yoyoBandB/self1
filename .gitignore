@@ -1,0 +1,10 @@
+# 忽略 ffmpeg 可執行檔
+CDN/ffmpeg/bin/*.exe
+
+# 忽略壓縮檔
+CDN/ffmpeg-*.7z
+
+# 如果 CDN 資料夾裡其他大檔也不要上傳
+CDN/*
+
+/vendor/
